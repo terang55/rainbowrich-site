@@ -94,6 +94,7 @@ export default function NotionRenderer({ blocks }: NotionRendererProps) {
       case 'image':
         return (
           <div key={id} className="mb-6">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img 
               src={content} 
               alt="이미지" 

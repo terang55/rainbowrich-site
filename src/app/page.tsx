@@ -1,5 +1,17 @@
 import { getNotionPage } from '@/lib/notion';
 import NotionRenderer from '@/components/NotionRenderer';
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "레인보우리치 - 아파트 매물 엑셀 자동저장 프로그램",
+  description: "부동산 투자의 새로운 패러다임! 클릭 한 번으로 아파트 매물 정보를 엑셀에 자동 저장. 500명 이상이 검증한 프로그램으로 급매 기회를 놓치지 마세요. 50,000원 단 한 번 결제로 평생 사용!",
+  keywords: ["부동산 투자", "아파트 매물", "엑셀 자동저장", "부동산 프로그램", "매물 분석", "투자 도구"],
+  openGraph: {
+    title: "레인보우리치 - 아파트 매물 엑셀 자동저장 프로그램",
+    description: "부동산 투자의 새로운 패러다임! 클릭 한 번으로 아파트 매물 정보를 엑셀에 자동 저장. 500명 이상이 검증한 프로그램으로 급매 기회를 놓치지 마세요.",
+    url: "https://rainbowrich.site",
+  },
+};
 
 export default async function Home() {
   // 환경변수 확인

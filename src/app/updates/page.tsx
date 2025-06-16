@@ -1,5 +1,17 @@
 import { getNotionPage } from '@/lib/notion';
 import NotionRenderer from '@/components/NotionRenderer';
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "업데이트 내역",
+  description: "레인보우리치 프로그램의 최신 업데이트 내역을 확인하세요. R2.90부터 R1.1까지 모든 버전의 개선사항과 새로운 기능을 상세히 안내합니다.",
+  keywords: ["레인보우리치 업데이트", "프로그램 버전", "새로운 기능", "버그 수정", "개선사항"],
+  openGraph: {
+    title: "업데이트 내역 | 레인보우리치",
+    description: "레인보우리치 프로그램의 최신 업데이트 내역을 확인하세요. R2.90부터 R1.1까지 모든 버전의 개선사항과 새로운 기능을 상세히 안내합니다.",
+    url: "https://rainbowrich.site/updates",
+  },
+};
 
 export default async function Updates() {
   // 환경변수 확인

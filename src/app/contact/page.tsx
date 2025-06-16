@@ -1,5 +1,17 @@
 import { getNotionPage } from '@/lib/notion';
 import NotionRenderer from '@/components/NotionRenderer';
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "구매/문의",
+  description: "레인보우리치 프로그램 구매 및 문의사항은 여기서! 크몽을 통한 안전한 결제, 이메일 및 블로그를 통한 지원. FAQ와 상세한 연락처 정보를 확인하세요.",
+  keywords: ["레인보우리치 구매", "프로그램 문의", "크몽 결제", "고객지원", "FAQ"],
+  openGraph: {
+    title: "구매/문의 | 레인보우리치",
+    description: "레인보우리치 프로그램 구매 및 문의사항은 여기서! 크몽을 통한 안전한 결제, 이메일 및 블로그를 통한 지원. FAQ와 상세한 연락처 정보를 확인하세요.",
+    url: "https://rainbowrich.site/contact",
+  },
+};
 
 export default async function Contact() {
   // 환경변수 확인

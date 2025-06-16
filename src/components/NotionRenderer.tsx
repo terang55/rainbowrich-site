@@ -13,10 +13,12 @@ export default function NotionRenderer({ blocks }: NotionRendererProps) {
 
     // YouTube URL 감지 및 임베드 처리
     const isYouTubeUrl = (url: string) => {
+      if (!url) return false;
       return url.includes('youtube.com') || url.includes('youtu.be');
     };
 
     const getYouTubeEmbedUrl = (url: string) => {
+      if (!url) return '';
       const videoId = url.includes('youtu.be') 
         ? url.split('youtu.be/')[1]?.split('?')[0]
         : url.split('v=')[1]?.split('&')[0];
@@ -43,7 +45,7 @@ export default function NotionRenderer({ blocks }: NotionRendererProps) {
           </h3>
         );
       case 'paragraph':
-        if (!content.trim()) return <br key={id} />;
+        if (!content || !content.trim()) return <br key={id} />;
         return (
           <p key={id} className="mb-4 text-gray-700 leading-relaxed">
             <span dangerouslySetInnerHTML={{ __html: formatText(content) }} />
@@ -170,6 +172,7 @@ export default function NotionRenderer({ blocks }: NotionRendererProps) {
 
   // 텍스트 포맷팅 (마크다운 스타일을 HTML로 변환)
   const formatText = (text: string) => {
+    if (!text) return '';
     return text
       .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
       .replace(/\*(.*?)\*/g, '<em>$1</em>')

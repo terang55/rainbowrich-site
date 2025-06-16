@@ -54,11 +54,15 @@ export default async function Home() {
   }
 
   try {
-    const blocks = await getNotionPage(pageId);
+    const pageData = await getNotionPage(pageId);
+    
+    if (!pageData) {
+      throw new Error('페이지 데이터를 불러올 수 없습니다.');
+    }
     
     return (
       <div className="max-w-4xl mx-auto px-4 py-12">
-        <NotionRenderer blocks={blocks} />
+        <NotionRenderer blocks={pageData.blocks} />
       </div>
     );
   } catch (error) {

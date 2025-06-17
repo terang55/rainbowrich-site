@@ -57,6 +57,14 @@ export const metadata: Metadata = {
     google: "google-site-verification-code", // 나중에 Google Search Console에서 받을 코드
   },
   category: "technology",
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '32x32', type: 'image/x-icon' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -69,6 +77,10 @@ export default function RootLayout({
       <head>
         {/* 네이버 웹마스터도구 인증 메타태그 */}
         <meta name="naver-site-verification" content="f8d19522a1459a867dfef4d71aff96c371910a07" />
+        
+        {/* PWA 매니페스트 */}
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#3B82F6" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

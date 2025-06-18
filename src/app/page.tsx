@@ -1,5 +1,6 @@
 import { getNotionPage } from '@/lib/notion';
 import NotionRenderer from '@/components/NotionRenderer';
+import FAQ from '@/components/FAQ';
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -73,9 +74,12 @@ export default async function Home() {
     }
     
     return (
-      <div className="max-w-4xl mx-auto px-4 py-12">
-        <NotionRenderer blocks={pageData.blocks} />
-      </div>
+      <>
+        <div className="max-w-4xl mx-auto px-4 py-12">
+          <NotionRenderer blocks={pageData.blocks} />
+        </div>
+        <FAQ />
+      </>
     );
   } catch (error) {
     console.error('페이지 로딩 오류:', error);

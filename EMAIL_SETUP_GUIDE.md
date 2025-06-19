@@ -8,17 +8,17 @@
 
 ```bash
 # Notion API 설정
-NOTION_API_KEY=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
-NOTION_MAIN_PAGE_ID=1c76aaedc7eb80bf95f5d50a2dd58961
-NOTION_UPDATES_PAGE_ID=cf24231b38994ed28c1c1cfd09e5a078
-NOTION_CONTACT_PAGE_ID=1cc6aaedc7eb8020b408e2d5d8cfa473
+NOTION_API_KEY=your_notion_api_key_here
+NOTION_MAIN_PAGE_ID=your_main_page_id_here
+NOTION_UPDATES_PAGE_ID=your_updates_page_id_here
+NOTION_CONTACT_PAGE_ID=your_contact_page_id_here
 
 # 이메일 SMTP 설정 (Gmail 사용)
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
-SMTP_USER=rainbowcr55@gmail.com
+SMTP_USER=your_email@gmail.com
 SMTP_PASS=your_gmail_app_password_here
-ADMIN_EMAIL=rainbowcr55@gmail.com
+ADMIN_EMAIL=your_email@gmail.com
 ```
 
 ## 2. Gmail 앱 비밀번호 생성
@@ -29,7 +29,7 @@ Gmail에서 앱 비밀번호를 생성해야 합니다:
 
 1. **Gmail 계정 보안 설정**
    - https://myaccount.google.com/security 접속
-   - rainbowcr55@gmail.com으로 로그인
+   - 본인의 Gmail 계정으로 로그인
 
 2. **2단계 인증 활성화**
    - "2단계 인증" 섹션에서 활성화
@@ -49,16 +49,16 @@ Gmail에서 앱 비밀번호를 생성해야 합니다:
 
 ```bash
 # 완성된 .env.local 파일 예시
-NOTION_API_KEY=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
-NOTION_MAIN_PAGE_ID=1c76aaedc7eb80bf95f5d50a2dd58961
-NOTION_UPDATES_PAGE_ID=cf24231b38994ed28c1c1cfd09e5a078
-NOTION_CONTACT_PAGE_ID=1cc6aaedc7eb8020b408e2d5d8cfa473
+NOTION_API_KEY=your_notion_api_key_here
+NOTION_MAIN_PAGE_ID=your_main_page_id_here
+NOTION_UPDATES_PAGE_ID=your_updates_page_id_here
+NOTION_CONTACT_PAGE_ID=your_contact_page_id_here
 
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
-SMTP_USER=rainbowcr55@gmail.com
-SMTP_PASS=abcd efgh ijkl mnop
-ADMIN_EMAIL=rainbowcr55@gmail.com
+SMTP_USER=your_email@gmail.com
+SMTP_PASS=your_16_digit_app_password_here
+ADMIN_EMAIL=your_email@gmail.com
 ```
 
 ## 4. 테스트
@@ -73,7 +73,7 @@ ADMIN_EMAIL=rainbowcr55@gmail.com
 
 샘플 신청 시 다음 2개의 이메일이 자동 전송됩니다:
 
-### 📨 관리자 알림 이메일 (rainbowcr55@gmail.com)
+### 📨 관리자 알림 이메일
 - 제목: [레인보우리치] 새로운 샘플 요청 - {아파트명}
 - 내용: 신청자 정보, 요청 내용, 처리 안내
 
@@ -98,4 +98,10 @@ ADMIN_EMAIL=rainbowcr55@gmail.com
 - `.env.local` 파일은 git에 커밋하지 마세요
 - 앱 비밀번호는 안전하게 보관하세요
 - 이메일 전송 실패 시에도 샘플 신청은 접수됩니다
-- 백업용으로 콘솔 로그도 함께 출력됩니다 
+- 백업용으로 콘솔 로그도 함께 출력됩니다
+
+## ⚠️ 보안 주의사항
+
+- 실제 API 키와 비밀번호는 절대 GitHub에 업로드하지 마세요
+- `.env.local` 파일은 `.gitignore`에 포함되어 있어야 합니다
+- 프로덕션 환경에서는 Vercel 환경변수를 사용하세요 

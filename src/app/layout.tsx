@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import Analytics from "./analytics";
+import MobileNav from "@/components/MobileNav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -170,29 +171,34 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <Analytics />
-        <nav className="bg-white shadow-sm border-b">
+        <nav className="bg-white shadow-sm border-b sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
-              <Link href="/" className="text-2xl font-bold text-blue-600">
+              <Link href="/" className="text-xl sm:text-2xl font-bold text-blue-600">
                 레인보우리치
               </Link>
-              <div className="flex space-x-8 items-center">
-                <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors">
+              
+              {/* 데스크톱 네비게이션 */}
+              <div className="hidden md:flex space-x-4 lg:space-x-8 items-center">
+                <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors text-sm lg:text-base">
                   홈
                 </Link>
-                <Link href="/updates" className="text-gray-700 hover:text-blue-600 transition-colors">
+                <Link href="/updates" className="text-gray-700 hover:text-blue-600 transition-colors text-sm lg:text-base">
                   업데이트 내역
                 </Link>
-                <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">
+                <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors text-sm lg:text-base">
                   문의
                 </Link>
-                <Link href="/sample" className="text-gray-700 hover:text-blue-600 transition-colors">
+                <Link href="/sample" className="text-gray-700 hover:text-blue-600 transition-colors text-sm lg:text-base">
                   무료샘플신청
                 </Link>
-                <Link href="/order" className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors font-semibold">
+                <Link href="/order" className="bg-blue-600 text-white px-3 lg:px-4 py-2 rounded-md hover:bg-blue-700 transition-colors font-semibold text-sm lg:text-base">
                   구매하기
                 </Link>
               </div>
+
+              {/* 모바일 네비게이션 */}
+              <MobileNav />
             </div>
           </div>
         </nav>

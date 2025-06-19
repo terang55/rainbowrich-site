@@ -5,10 +5,10 @@ export default function OrderPage() {
   const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/1nJc-tLw6ph1ccxl-9p2RWYE4EguPe1EA_UdJ954tjrw/viewform";
 
   return (
-    <div className="max-w-2xl mx-auto px-4 py-12">
-      <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">레인보우리치 구매하기</h1>
-        <p className="text-xl text-gray-600">아파트 매물 엑셀 자동 저장 & 분석 프로그램</p>
+    <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+      <div className="text-center mb-6 sm:mb-8">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">레인보우리치 구매하기</h1>
+        <p className="text-lg sm:text-xl text-gray-600 px-2">아파트 매물 엑셀 자동 저장 & 분석 프로그램</p>
       </div>
 
       {/* 상품 정보 */}

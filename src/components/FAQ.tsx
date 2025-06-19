@@ -42,35 +42,35 @@ export default function FAQ() {
   };
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-12 sm:py-16 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
             자주 묻는 질문 (FAQ)
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-base sm:text-lg text-gray-600 px-2">
             레인보우리치 부동산 프로그램에 대한 궁금한 점들을 확인해보세요
           </p>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4 mx-2 sm:mx-0">
           {faqData.map((faq, index) => (
             <div key={index} className="border border-gray-200 rounded-lg">
               <button
-                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
+                className="w-full px-4 sm:px-6 py-3 sm:py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
                 onClick={() => toggleItem(index)}
               >
-                <h3 className="font-semibold text-gray-900 pr-4">
+                <h3 className="font-semibold text-gray-900 pr-3 sm:pr-4 text-sm sm:text-base">
                   {faq.question}
                 </h3>
-                <span className="text-blue-600 font-bold text-xl">
+                <span className="text-blue-600 font-bold text-lg sm:text-xl flex-shrink-0">
                   {openItems.includes(index) ? '−' : '+'}
                 </span>
               </button>
               
               {openItems.includes(index) && (
-                <div className="px-6 pb-4">
-                  <p className="text-gray-700 leading-relaxed">
+                <div className="px-4 sm:px-6 pb-3 sm:pb-4">
+                  <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
                     {faq.answer}
                   </p>
                 </div>
@@ -79,13 +79,13 @@ export default function FAQ() {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <p className="text-gray-600 mb-4">
+        <div className="text-center mt-8 sm:mt-12 px-4 sm:px-0">
+          <p className="text-gray-600 mb-3 sm:mb-4 text-sm sm:text-base">
             더 궁금한 점이 있으시다면 언제든 문의해주세요!
           </p>
           <a 
             href="/contact" 
-            className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+            className="inline-block bg-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-blue-700 transition-colors text-sm sm:text-base font-semibold"
           >
             구매 문의하기
           </a>

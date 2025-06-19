@@ -42,11 +42,14 @@ export default async function Contact() {
                 <p className="text-gray-700">support@rainbowrich.com</p>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900">크몽</h4>
-                <a href="https://kmong.com/gig/540283" target="_blank" rel="noopener noreferrer" 
-                   className="text-blue-600 hover:underline">
-                  https://kmong.com/gig/540283
-                </a>
+                <h4 className="font-semibold text-gray-900">주문/구매</h4>
+                <div className="space-y-2">
+                  <a href="/order" 
+                     className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors inline-block">
+                    구매하기
+                  </a>
+                  <p className="text-sm text-gray-600">간단한 신청서 작성</p>
+                </div>
               </div>
             </div>
           </div>

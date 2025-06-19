@@ -129,7 +129,7 @@ export default function RootLayout({
                   "price": "50000",
                   "priceCurrency": "KRW",
                   "availability": "https://schema.org/InStock",
-                  "url": "https://kmong.com/gig/540283"
+                  "url": "https://rainbowrich.site/order"
                 },
                 "creator": {
                   "@type": "Organization",
@@ -149,7 +149,7 @@ export default function RootLayout({
                 "url": "https://rainbowrich.site",
                 "description": "부동산 투자 자동화 프로그램 개발사",
                 "sameAs": [
-                  "https://kmong.com/gig/540283"
+                  "https://rainbowrich.site"
                 ]
               },
               {
@@ -176,7 +176,7 @@ export default function RootLayout({
               <Link href="/" className="text-2xl font-bold text-blue-600">
                 레인보우리치
               </Link>
-              <div className="flex space-x-8">
+              <div className="flex space-x-8 items-center">
                 <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors">
                   홈
                 </Link>
@@ -184,7 +184,13 @@ export default function RootLayout({
                   업데이트 내역
                 </Link>
                 <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">
-                  구매/문의
+                  문의
+                </Link>
+                <Link href="/sample" className="text-gray-700 hover:text-blue-600 transition-colors">
+                  무료샘플신청
+                </Link>
+                <Link href="/order" className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors font-semibold">
+                  구매하기
                 </Link>
               </div>
             </div>
@@ -198,7 +204,7 @@ export default function RootLayout({
         <footer className="bg-white border-t">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="text-center text-gray-600">
-              <p>&copy; 2024 레인보우리치. All rights reserved.</p>
+              <p>&copy; 2023 레인보우리치. All rights reserved.</p>
               <p className="mt-2">부동산 투자의 새로운 패러다임</p>
             </div>
           </div>

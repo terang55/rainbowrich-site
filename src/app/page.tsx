@@ -51,15 +51,15 @@ export default async function Home() {
             </div>
           </div>
 
-          <div className="text-center">
+          <div className="text-center space-y-4">
             <a 
-              href="https://kmong.com/gig/540283" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block"
+              href="/order"
+              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block mr-4"
             >
-              지금 구매하기 (50,000원)
+              지금 구매하기
             </a>
+            <br />
+            <p className="text-sm text-gray-600">간단한 신청서 작성 후 담당자가 연락드립니다</p>
           </div>
         </div>
       </div>

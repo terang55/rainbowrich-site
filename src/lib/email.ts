@@ -12,7 +12,7 @@ interface SampleRequestData {
 
 interface EmailResponse {
   success: boolean;
-  error?: any;
+  error?: Error | unknown;
 }
 
 // Gmail SMTP 설정

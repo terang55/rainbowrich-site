@@ -108,7 +108,6 @@ export default function FAQ() {
           {/* 추가 안내 텍스트 */}
           <div className="mt-4 sm:mt-6 text-xs sm:text-sm text-gray-500">
             <p className="mb-1">🎁 무료 샘플로 먼저 체험해보세요!</p>
-            <p>💰 정식 구매 시 50,000원 (평생 사용)</p>
           </div>
         </div>
       </div>

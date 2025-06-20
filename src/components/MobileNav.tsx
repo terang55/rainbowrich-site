@@ -37,8 +37,7 @@ export default function MobileNav() {
   const menuItems = [
     { href: '/', label: '홈', icon: '🏠' },
     { href: '/updates', label: '업데이트 내역', icon: '📋' },
-    { href: '/contact', label: '문의', icon: '📞' },
-    { href: '/sample', label: '무료샘플신청', icon: '📄' },
+    { href: '/contact', label: '문의', icon: '�' },
   ];
 
   return (
@@ -115,6 +114,16 @@ export default function MobileNav() {
               {/* 구분선 */}
               <div className="my-4 border-t border-gray-200"></div>
               
+              {/* 무료샘플신청 버튼 - 강조된 디자인 */}
+              <Link
+                href="/sample"
+                className="flex items-center justify-center bg-gradient-to-r from-green-600 to-green-700 text-white px-4 py-4 rounded-lg hover:from-green-700 hover:to-green-800 transition-all duration-200 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 mb-3"
+                onClick={closeMenu}
+              >
+                <span className="text-lg mr-2">📄</span>
+                <span className="text-base">무료샘플신청</span>
+              </Link>
+              
               {/* 구매하기 버튼 - 강조된 디자인 */}
               <Link
                 href="/order"
@@ -123,15 +132,12 @@ export default function MobileNav() {
               >
                 <span className="text-lg mr-2">💳</span>
                 <span className="text-base">구매하기</span>
-                <span className="ml-2 text-sm opacity-90">(5만원)</span>
               </Link>
             </div>
             
             {/* 추가 정보 섹션 */}
             <div className="mt-6 pt-4 border-t border-gray-200">
               <div className="text-center">
-                <p className="text-sm text-gray-500 mb-2">🌟 500명 이상이 선택한 프로그램</p>
-                <p className="text-xs text-gray-400">부동산 투자의 새로운 패러다임</p>
               </div>
             </div>
           </div>

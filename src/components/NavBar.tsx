@@ -37,10 +37,10 @@ export default function NavBar() {
           {/* 로고 */}
           <Link 
             href="/" 
-            className="text-xl sm:text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors"
+            className="flex items-center text-xl sm:text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors"
           >
-            <span className="hidden sm:inline">레인보우리치</span>
-            <span className="sm:hidden">🌈💰</span>
+            <span className="mr-1">🌈</span>
+            <span>레인보우리치</span>
           </Link>
           
           {/* 데스크톱 네비게이션 */}

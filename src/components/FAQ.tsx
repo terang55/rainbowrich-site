@@ -80,15 +80,36 @@ export default function FAQ() {
         </div>
 
         <div className="text-center mt-8 sm:mt-12 px-4 sm:px-0">
-          <p className="text-gray-600 mb-3 sm:mb-4 text-sm sm:text-base">
+          <p className="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base">
             더 궁금한 점이 있으시다면 언제든 문의해주세요!
           </p>
-          <a 
-            href="/contact" 
-            className="inline-block bg-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-blue-700 transition-colors text-sm sm:text-base font-semibold"
-          >
-            구매 문의하기
-          </a>
+          
+          {/* 버튼 그룹 */}
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
+            {/* 무료 샘플 신청하기 버튼 */}
+            <a 
+              href="/sample" 
+              className="w-full sm:w-auto inline-flex items-center justify-center bg-gradient-to-r from-green-500 to-green-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:from-green-600 hover:to-green-700 transition-all duration-200 text-sm sm:text-base font-semibold shadow-md hover:shadow-lg transform hover:scale-105"
+            >
+              <span className="mr-2">📄</span>
+              무료 샘플 신청하기
+            </a>
+            
+            {/* 구매 문의하기 버튼 */}
+            <a 
+              href="/contact" 
+              className="w-full sm:w-auto inline-flex items-center justify-center bg-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-blue-700 transition-all duration-200 text-sm sm:text-base font-semibold shadow-md hover:shadow-lg transform hover:scale-105"
+            >
+              <span className="mr-2">💬</span>
+              구매 문의하기
+            </a>
+          </div>
+          
+          {/* 추가 안내 텍스트 */}
+          <div className="mt-4 sm:mt-6 text-xs sm:text-sm text-gray-500">
+            <p className="mb-1">🎁 무료 샘플로 먼저 체험해보세요!</p>
+            <p>💰 정식 구매 시 50,000원 (평생 사용)</p>
+          </div>
         </div>
       </div>
 

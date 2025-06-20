@@ -71,13 +71,7 @@ export default function SamplePage() {
             </svg>
           </div>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">신청이 완료되었습니다!</h1>
-          <p className="text-xl text-gray-600 mb-4">24시간 이내에 샘플 엑셀 파일을 이메일로 보내드리겠습니다.</p>
-          <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-8">
-            <p className="text-green-800 text-sm">
-              📧 확인 이메일이 고객님의 이메일 주소로 전송되었습니다.<br />
-              이메일을 받지 못하셨다면 스팸함을 확인해보시거나 rainbowcr55@gmail.com으로 연락주세요.
-            </p>
-          </div>
+          <p className="text-xl text-gray-600 mb-8">24시간 이내에 샘플 엑셀 파일을 이메일로 보내드리겠습니다.</p>
           
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
             <h2 className="text-lg font-bold text-gray-900 mb-4">📧 다음 단계</h2>

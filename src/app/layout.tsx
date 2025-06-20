@@ -4,6 +4,7 @@ import "./globals.css";
 import Link from "next/link";
 import Analytics from "./analytics";
 import MobileNav from "@/components/MobileNav";
+import NavBar from "@/components/NavBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -118,30 +119,30 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify([
               {
-                "@context": "https://schema.org",
-                "@type": "SoftwareApplication",
-                "name": "레인보우리치",
-                "description": "부동산 투자의 새로운 패러다임! 클릭 한 번으로 아파트 매물 정보를 엑셀에 자동 저장하는 프로그램",
-                "url": "https://rainbowrich.site",
-                "applicationCategory": "BusinessApplication",
-                "operatingSystem": "Windows",
-                "offers": {
-                  "@type": "Offer",
-                  "price": "50000",
-                  "priceCurrency": "KRW",
-                  "availability": "https://schema.org/InStock",
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              "name": "레인보우리치",
+              "description": "부동산 투자의 새로운 패러다임! 클릭 한 번으로 아파트 매물 정보를 엑셀에 자동 저장하는 프로그램",
+              "url": "https://rainbowrich.site",
+              "applicationCategory": "BusinessApplication",
+              "operatingSystem": "Windows",
+              "offers": {
+                "@type": "Offer",
+                "price": "50000",
+                "priceCurrency": "KRW",
+                "availability": "https://schema.org/InStock",
                   "url": "https://rainbowrich.site/order"
-                },
-                "creator": {
-                  "@type": "Organization",
-                  "name": "레인보우리치",
-                  "url": "https://rainbowrich.site"
-                },
-                "aggregateRating": {
-                  "@type": "AggregateRating",
-                  "ratingValue": "4.8",
-                  "reviewCount": "500"
-                }
+              },
+              "creator": {
+                "@type": "Organization",
+                "name": "레인보우리치",
+                "url": "https://rainbowrich.site"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "reviewCount": "500"
+              }
               },
               {
                 "@context": "https://schema.org",
@@ -171,37 +172,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <Analytics />
-        <nav className="bg-white shadow-sm border-b sticky top-0 z-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-16">
-              <Link href="/" className="text-xl sm:text-2xl font-bold text-blue-600">
-                레인보우리치
-              </Link>
-              
-              {/* 데스크톱 네비게이션 */}
-              <div className="hidden md:flex space-x-4 lg:space-x-8 items-center">
-                <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors text-sm lg:text-base">
-                  홈
-                </Link>
-                <Link href="/updates" className="text-gray-700 hover:text-blue-600 transition-colors text-sm lg:text-base">
-                  업데이트 내역
-                </Link>
-                <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors text-sm lg:text-base">
-                  문의
-                </Link>
-                <Link href="/sample" className="text-gray-700 hover:text-blue-600 transition-colors text-sm lg:text-base">
-                  무료샘플신청
-                </Link>
-                <Link href="/order" className="bg-blue-600 text-white px-3 lg:px-4 py-2 rounded-md hover:bg-blue-700 transition-colors font-semibold text-sm lg:text-base">
-                  구매하기
-                </Link>
-              </div>
-
-              {/* 모바일 네비게이션 */}
-              <MobileNav />
-            </div>
-          </div>
-        </nav>
+        <NavBar />
         
         <main className="min-h-screen bg-gray-50">
           {children}

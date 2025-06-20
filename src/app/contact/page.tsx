@@ -47,7 +47,7 @@ export default async function Contact() {
                   <a href="/order" 
                      className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors inline-block">
                     구매하기
-                  </a>
+                </a>
                   <p className="text-sm text-gray-600">간단한 신청서 작성</p>
                 </div>
               </div>

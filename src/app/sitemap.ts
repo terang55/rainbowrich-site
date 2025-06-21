@@ -23,6 +23,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8, // 샘플 신청 페이지
     },
     {
+      url: 'https://rainbowrich.site/blog',
+      lastModified: currentDate,
+      changeFrequency: 'weekly', // 블로그 콘텐츠 업데이트
+      priority: 0.8, // SEO를 위한 높은 우선순위
+    },
+    {
       url: 'https://rainbowrich.site/updates',
       lastModified: currentDate,
       changeFrequency: 'weekly', // 업데이트가 자주 있으므로 변경

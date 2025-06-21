@@ -21,6 +21,7 @@ export default function NavBar() {
 
   const navItems = [
     { href: '/', label: '홈' },
+    { href: '/blog', label: '투자가이드' },
     { href: '/updates', label: '업데이트 내역' },
     { href: '/contact', label: '문의' },
     { href: '/sample', label: '무료샘플신청' },

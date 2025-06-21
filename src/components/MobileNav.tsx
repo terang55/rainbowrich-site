@@ -36,7 +36,6 @@ export default function MobileNav() {
 
   const menuItems = [
     { href: '/', label: '홈', icon: '🏠' },
-    { href: '/blog', label: '투자가이드', icon: '📚' },
     { href: '/updates', label: '업데이트 내역', icon: '📋' },
     { href: '/contact', label: '문의', icon: '💬' },
   ];

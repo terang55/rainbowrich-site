@@ -6,17 +6,44 @@ export default function robots(): MetadataRoute.Robots {
       {
       userAgent: '*',
       allow: '/',
-        disallow: ['/private/', '/admin/', '/api/'],
+        disallow: [
+          '/private/', 
+          '/admin/', 
+          '/api/',
+          '/order/success',
+          '/*?*',
+          '/temp/',
+        ],
       },
       {
         userAgent: 'Googlebot',
         allow: '/',
-        disallow: ['/private/', '/admin/'],
+        disallow: [
+          '/private/', 
+          '/admin/',
+          '/order/success',
+          '/*?*',
+        ],
     },
       {
         userAgent: 'Bingbot',
         allow: '/',
-        disallow: ['/private/', '/admin/'],
+        disallow: [
+          '/private/', 
+          '/admin/',
+          '/order/success',
+          '/*?*',
+        ],
+      },
+      {
+        userAgent: 'NaverBot',
+        allow: '/',
+        disallow: [
+          '/private/', 
+          '/admin/',
+          '/order/success',
+          '/*?*',
+        ],
       }
     ],
     sitemap: 'https://rainbowrich.site/sitemap.xml',

@@ -1,6 +1,47 @@
 'use client';
 
 import { useState } from 'react';
+import { Metadata } from 'next';
+
+// 메타데이터 생성 함수
+export function generateMetadata(): Metadata {
+  return {
+    title: "무료 샘플 신청 - 레인보우리치 아파트 매물 엑셀 자동저장 프로그램",
+    description: "레인보우리치 프로그램의 실제 효과를 무료로 체험해보세요! 원하는 아파트 단지의 매물 정보를 엑셀로 무료 제공. 24시간 이내 이메일 전송. 구매 전 미리 확인하세요.",
+    keywords: [
+      "무료 샘플", "아파트 매물 샘플", "부동산 데이터 샘플", "레인보우리치 체험",
+      "매물 정보 무료", "부동산 프로그램 체험", "아파트 엑셀 샘플",
+      "부동산 투자 무료 체험", "매물 데이터 미리보기", "무료 부동산 데이터",
+      "아파트 시세 샘플", "부동산 분석 체험", "매물 자동수집 체험"
+    ],
+    openGraph: {
+      title: "무료 샘플 신청 - 레인보우리치 아파트 매물 엑셀 프로그램",
+      description: "원하는 아파트 단지의 매물 정보를 엑셀로 무료 제공! 24시간 이내 이메일 전송. 구매 전 미리 체험해보세요.",
+      url: "https://rainbowrich.site/sample",
+      type: "website",
+      images: [
+        {
+          url: "https://rainbowrich.site/og-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: "레인보우리치 무료 샘플 신청",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "무료 샘플 신청 - 레인보우리치 아파트 매물 엑셀 프로그램",
+      description: "원하는 아파트 단지의 매물 정보를 엑셀로 무료 제공! 24시간 이내 이메일 전송.",
+    },
+    alternates: {
+      canonical: "https://rainbowrich.site/sample",
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+  };
+}
 
 export default function SamplePage() {
   const [formData, setFormData] = useState({

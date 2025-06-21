@@ -1,5 +1,47 @@
 'use client';
 
+import { Metadata } from 'next';
+
+// 메타데이터 생성 함수
+export function generateMetadata(): Metadata {
+  return {
+    title: "구매하기 - 레인보우리치 아파트 매물 엑셀 자동저장 프로그램",
+    description: "레인보우리치 프로그램을 지금 구매하세요! 아파트 매물 정보를 클릭 한 번으로 엑셀에 자동 저장. 무제한 사용, 무제한 업데이트 제공. 500명 이상이 검증한 부동산 투자 필수 도구.",
+    keywords: [
+      "레인보우리치 구매", "부동산 프로그램 구매", "아파트 매물 프로그램", 
+      "부동산 투자 도구", "매물 자동저장", "부동산 분석 프로그램",
+      "네이버 부동산 크롤링", "부동산 자동화", "매물 데이터 수집",
+      "부동산 엑셀", "투자 분석 툴", "급매 찾기", "갭투자 도구"
+    ],
+    openGraph: {
+      title: "레인보우리치 구매하기 - 아파트 매물 엑셀 자동저장 프로그램",
+      description: "클릭 한 번으로 아파트 매물 정보를 엑셀에 자동 저장! 무제한 사용, 무제한 업데이트. 지금 구매하세요.",
+      url: "https://rainbowrich.site/order",
+      type: "website",
+      images: [
+        {
+          url: "https://rainbowrich.site/og-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: "레인보우리치 구매하기",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "레인보우리치 구매하기 - 아파트 매물 엑셀 자동저장 프로그램",
+      description: "클릭 한 번으로 아파트 매물 정보를 엑셀에 자동 저장! 무제한 사용, 무제한 업데이트.",
+    },
+    alternates: {
+      canonical: "https://rainbowrich.site/order",
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+  };
+}
+
 export default function OrderPage() {
   // 구글폼 URL
   const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/1nJc-tLw6ph1ccxl-9p2RWYE4EguPe1EA_UdJ954tjrw/viewform";

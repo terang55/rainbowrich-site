@@ -23,7 +23,6 @@ export default function NavBar() {
     { href: '/', label: '홈' },
     { href: '/updates', label: '업데이트 내역' },
     { href: '/contact', label: '문의' },
-    { href: '/sample', label: '무료샘플신청' },
   ];
 
   return (
@@ -61,6 +60,15 @@ export default function NavBar() {
                 )}
               </Link>
             ))}
+            
+            {/* 무료샘플신청 버튼 */}
+            <Link 
+              href="/sample" 
+              className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 lg:px-4 py-2 rounded-lg hover:from-green-700 hover:to-green-800 transition-all duration-200 font-semibold text-sm lg:text-base shadow-md hover:shadow-lg transform hover:scale-105"
+            >
+              <span className="hidden lg:inline">무료샘플신청</span>
+              <span className="lg:hidden">샘플</span>
+            </Link>
             
             {/* 구매하기 버튼 */}
             <Link 

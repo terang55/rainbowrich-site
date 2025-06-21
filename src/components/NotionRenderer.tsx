@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { NotionBlock } from '@/lib/notion';
 
 interface NotionRendererProps {
@@ -93,12 +94,21 @@ export default function NotionRenderer({ blocks }: NotionRendererProps) {
         );
       case 'image':
         return (
-          <div key={id} className="mb-6">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img 
+          <div key={id} className="mb-6 relative w-full">
+            <Image 
               src={content} 
               alt="이미지" 
+              width={800}
+              height={600}
               className="max-w-full h-auto rounded-lg shadow-md"
+              style={{ width: 'auto', height: 'auto' }}
+              unoptimized={content.includes('notion') || content.includes('amazonaws')}
+              onError={(e) => {
+                console.error('이미지 로딩 실패:', content);
+                // 폴백 이미지로 변경하거나 숨기기
+                const target = e.target as HTMLImageElement;
+                target.style.display = 'none';
+              }}
             />
           </div>
         );

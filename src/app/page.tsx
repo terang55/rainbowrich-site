@@ -14,6 +14,8 @@ export const metadata: Metadata = {
   },
 };
 
+export const dynamic = 'force-dynamic'; // Notion Signed URL 갱신을 위해 요청마다 재검사
+
 export default async function Home() {
   // 환경변수 확인
   const apiKey = process.env.NOTION_API_KEY;

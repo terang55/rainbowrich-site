@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     images: ["https://rainbowrich.site/og-image.jpg"],
   },
   verification: {
-    // google: "실제_구글_서치_콘솔_인증코드", // 이미 다른 방법으로 인증 완료됨
+    google: "m5vCxjdvwd-Hk93k8W79n2hsvKvjGuMIXwzdls3GHWE",
   },
   category: "technology",
   applicationName: "레인보우리치",

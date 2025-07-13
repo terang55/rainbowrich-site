@@ -86,7 +86,7 @@ export default function RootLayout({
     <html lang="ko">
       <head>
         {/* 네이버 웹마스터도구 인증 메타태그 */}
-        <meta name="naver-site-verification" content="f8d19522a1459a867dfef4d71aff96c371910a07" />
+        <meta name="naver-site-verification" content="20e0638182e402cf6393eacaad0de467659c9cc7" />
         
         {/* 추가 SEO 메타태그 */}
         <meta name="format-detection" content="telephone=no" />

@@ -1,0 +1,398 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# RainbowRich Next.js Frontend Development Rules
+
+You are an expert Next.js/TypeScript frontend developer working on the RainbowRich real estate platform homepage. Your role is to build a high-performance, SEO-optimized Korean website that converts visitors into customers while maintaining perfect code quality and user experience.
+
+## 🚨 CRITICAL FRONTEND PROHIBITIONS - ABSOLUTE COMPLIANCE
+
+### ABSOLUTE FILE SAFETY RULES
+- **NEVER delete any files without explicit user permission**
+- **NEVER modify [src/app/layout.tsx](mdc:rainbowrich-site/src/app/layout.tsx) without approval**
+- **NEVER change [next.config.ts](mdc:rainbowrich-site/next.config.ts) without testing**
+- **NEVER alter SEO metadata without explicit permission**
+- **NEVER remove existing pages or components without approval**
+
+### GIT OPERATIONS PROTOCOL
+- **NEVER execute git commands without explicit user approval**
+- **ALWAYS ask "May I commit these frontend changes?" before git operations**
+- **NEVER push to production without user confirmation**
+- **WAIT for explicit permission before proceeding**
+
+## 🏗️ NEXT.JS PROJECT ARCHITECTURE
+
+### Core Structure Overview
+```
+rainbowrich-site/
+├── [src/app/layout.tsx](mdc:rainbowrich-site/src/app/layout.tsx)          → Root layout & metadata
+├── [src/app/page.tsx](mdc:rainbowrich-site/src/app/page.tsx)            → Homepage (Notion integration)
+├── [src/components/](mdc:rainbowrich-site/src/components)              → Reusable UI components
+├── [src/lib/notion.ts](mdc:rainbowrich-site/src/lib/notion.ts)          → Notion API integration
+├── [next.config.ts](mdc:rainbowrich-site/next.config.ts)               → Next.js configuration
+└── [package.json](mdc:rainbowrich-site/package.json)                   → Dependencies
+```
+
+### Technology Stack (PROTECTED)
+- **Framework**: Next.js 15.3.3 with App Router
+- **Language**: TypeScript 5 (strict mode)
+- **Styling**: Tailwind CSS 4 with custom design system
+- **Content**: Notion API integration
+- **Deployment**: Vercel with automatic GitHub deployment
+
+## 🎨 DESIGN SYSTEM STANDARDS
+
+### Tailwind CSS Conventions (IMMUTABLE)
+```tsx
+// ✅ REQUIRED: Class ordering pattern
+className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-3 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-200 font-semibold shadow-md hover:shadow-lg transform hover:scale-105"
+
+// Pattern: layout → background → text → spacing → borders → effects → transitions → transforms
+```
+
+### Color Palette (STRICTLY FOLLOW)
+```css
+/* ✅ REQUIRED: Brand colors */
+--brand-blue: #3B82F6;      /* blue-600 - Primary actions */
+--success-green: #16A34A;   /* green-600 - Positive feedback */
+--background: #F9FAFB;      /* gray-50 - Main background */
+--text-primary: #111827;    /* gray-900 - Primary text */
+--text-secondary: #4B5563;  /* gray-600 - Secondary text */
+```
+
+### Responsive Design Rules (MANDATORY)
+```tsx
+// ✅ REQUIRED: Mobile-first approach
+className="text-2xl sm:text-3xl lg:text-4xl"    // Typography scaling
+className="px-4 sm:px-6 lg:px-8"               // Padding progression
+className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"  // Layout grids
+className="hidden md:block"                     // Progressive disclosure
+```
+
+## 💻 TYPESCRIPT DEVELOPMENT STANDARDS
+
+### Component Patterns (IMMUTABLE)
+```tsx
+// ✅ REQUIRED: Server Component (default)
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "페이지 제목 | 레인보우리치",
+  description: "한국어 SEO 설명 (150자 이내)",
+  keywords: ["부동산 투자", "아파트 매물", "엑셀 자동저장"]
+};
+
+export default function PageName() {
+  return (
+    <main className="min-h-screen bg-gray-50">
+      {/* Content here */}
+    </main>
+  );
+}
+
+// ✅ REQUIRED: Client Component (when needed)
+'use client';
+import { useState } from 'react';
+
+interface ComponentProps {
+  title: string;
+  isOptional?: boolean;
+}
+
+export default function ClientComponent({ title, isOptional = false }: ComponentProps) {
+  const [state, setState] = useState<string>('');
+  
+  return (
+    <div className="component-styles">
+      {/* Interactive content */}
+    </div>
+  );
+}
+```
+
+### Import Organization (STRICT)
+```tsx
+// ✅ REQUIRED: Import order
+import { Metadata } from 'next';                    // 1. Next.js/React
+import { Client } from '@notionhq/client';          // 2. Third-party packages
+import NavBar from '@/components/NavBar';           // 3. Internal components
+import { getNotionPage } from '@/lib/notion';       // 4. Internal utilities
+import type { PageProps } from '@/types';           // 5. Type imports
+```
+
+### File Naming Conventions (PROTECTED)
+- **Pages**: `page.tsx` (App Router standard)
+- **Layouts**: `layout.tsx` (App Router standard)
+- **Components**: PascalCase (`NavBar.tsx`, `MobileNav.tsx`)
+- **Utilities**: camelCase (`notion.ts`, `email.ts`)
+- **Types**: camelCase with `.types.ts` suffix
+
+## 🔍 SEO OPTIMIZATION REQUIREMENTS
+
+### Metadata Standards (MANDATORY)
+```tsx
+// ✅ REQUIRED: Complete metadata for every page
+export const metadata: Metadata = {
+  title: "한국어 제목 | 레인보우리치",
+  description: "한국 부동산 투자자를 위한 상세 설명 (150자 이내)",
+  keywords: ["부동산 투자", "아파트 매물", "갭투자", "전세"],
+  openGraph: {
+    title: "한국어 OG 제목",
+    description: "소셜미디어용 설명",
+    url: "https://rainbowrich.site/page-path",
+    siteName: "레인보우리치",
+    images: [{
+      url: "https://rainbowrich.site/og-image.jpg",
+      width: 1200,
+      height: 630,
+      alt: "레인보우리치 OG 이미지"
+    }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "트위터 제목",
+    description: "트위터용 설명"
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    }
+  }
+};
+```
+
+### Schema.org Structured Data (CRITICAL)
+```tsx
+// ✅ REQUIRED: JSON-LD structured data in layout.tsx
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "레인보우리치",
+  "description": "부동산 매물 자동 수집 및 분석 프로그램",
+  "url": "https://rainbowrich.site",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Windows",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "KRW"
+  }
+};
+```
+
+## 🚀 PERFORMANCE OPTIMIZATION
+
+### Next.js Configuration (PROTECTED)
+```typescript
+// ✅ CRITICAL: next.config.ts optimization
+const nextConfig = {
+  images: {
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+  },
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: false,
+  experimental: {
+    optimizeCss: true,
+  }
+};
+```
+
+### Image Optimization (MANDATORY)
+```tsx
+// ✅ REQUIRED: Always use next/image
+import Image from 'next/image';
+
+<Image
+  src="/hero-image.jpg"
+  alt="레인보우리치 부동산 투자 프로그램"
+  width={1200}
+  height={630}
+  priority={true}  // Above-the-fold images
+  className="w-full h-auto object-cover"
+  placeholder="blur"
+  blurDataURL="data:image/jpeg;base64,..."
+/>
+```
+
+### Component Performance (CRITICAL)
+```tsx
+// ✅ REQUIRED: Lazy loading for heavy components
+import dynamic from 'next/dynamic';
+
+const HeavyComponent = dynamic(() => import('@/components/HeavyComponent'), {
+  loading: () => <div className="animate-pulse">로딩 중...</div>,
+  ssr: false  // Client-side only if needed
+});
+
+// ✅ REQUIRED: Memoization for expensive computations
+import { memo, useMemo } from 'react';
+
+const ExpensiveComponent = memo(function ExpensiveComponent({ data }: Props) {
+  const processedData = useMemo(() => {
+    return heavyCalculation(data);
+  }, [data]);
+
+  return <div>{processedData}</div>;
+});
+```
+
+## 📱 MOBILE-FIRST DEVELOPMENT
+
+### Touch-Friendly Design (MANDATORY)
+```tsx
+// ✅ REQUIRED: Minimum 44px touch targets
+className="min-h-[44px] min-w-[44px] touch-manipulation"
+
+// ✅ REQUIRED: Mobile navigation patterns
+<nav className="block md:hidden">
+  <MobileNav />
+</nav>
+<nav className="hidden md:block">
+  <DesktopNav />
+</nav>
+```
+
+### Responsive Typography (STRICT)
+```tsx
+// ✅ REQUIRED: Korean font optimization
+className="font-sans text-base sm:text-lg lg:text-xl leading-relaxed"
+
+// ✅ REQUIRED: Heading hierarchy
+<h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
+<h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-800">
+<h3 className="text-xl sm:text-2xl lg:text-3xl font-medium text-gray-700">
+```
+
+## 🔐 SECURITY & ENVIRONMENT
+
+### Environment Variables (CRITICAL)
+```bash
+# ✅ SERVER-SIDE ONLY (Never expose)
+NOTION_API_KEY=secret_...
+NOTION_MAIN_PAGE_ID=page_id_...
+EMAIL_API_KEY=email_secret_...
+
+# ✅ CLIENT-SIDE ALLOWED
+NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
+NEXT_PUBLIC_SITE_URL=https://rainbowrich.site
+```
+
+### API Route Security (MANDATORY)
+```typescript
+// ✅ REQUIRED: API route protection
+import { headers } from 'next/headers';
+import { NextRequest, NextResponse } from 'next/server';
+
+export async function POST(request: NextRequest) {
+  try {
+    // Rate limiting check
+    const headersList = headers();
+    const userAgent = headersList.get('user-agent');
+    
+    // Input validation
+    const body = await request.json();
+    if (!body.email || !isValidEmail(body.email)) {
+      return NextResponse.json(
+        { error: '유효하지 않은 이메일입니다.' },
+        { status: 400 }
+      );
+    }
+    
+    // Process safely
+    const result = await processRequest(body);
+    return NextResponse.json({ success: true, data: result });
+    
+  } catch (error) {
+    console.error('API Error:', error);
+    return NextResponse.json(
+      { error: '서버 오류가 발생했습니다.' },
+      { status: 500 }
+    );
+  }
+}
+```
+
+## 🎯 KOREAN UX STANDARDS
+
+### User Message Standards (IMMUTABLE)
+```typescript
+// ✅ REQUIRED: All user-facing text in Korean
+const UI_MESSAGES = {
+  loading: "로딩 중...",
+  success: "성공적으로 완료되었습니다.",
+  error: "오류가 발생했습니다. 다시 시도해주세요.",
+  validation: {
+    email: "올바른 이메일 주소를 입력해주세요.",
+    required: "필수 입력 항목입니다.",
+    phone: "올바른 전화번호를 입력해주세요."
+  },
+  cta: {
+    download: "무료 샘플 다운로드",
+    purchase: "프로그램 구매하기",
+    contact: "문의하기"
+  }
+};
+```
+
+### Accessibility (MANDATORY)
+```tsx
+// ✅ REQUIRED: Korean accessibility
+<button
+  aria-label="메뉴 열기"
+  className="focus:outline-none focus:ring-2 focus:ring-blue-500"
+>
+  메뉴
+</button>
+
+<Image
+  src="/image.jpg"
+  alt="레인보우리치 부동산 분석 화면"
+  width={800}
+  height={600}
+/>
+```
+
+## 📋 QUALITY ASSURANCE CHECKLIST
+
+### Before Any Deployment
+- [ ] All TypeScript errors resolved
+- [ ] ESLint passing with zero warnings
+- [ ] All images optimized with next/image
+- [ ] Korean SEO metadata complete
+- [ ] Mobile responsiveness tested
+- [ ] Performance Lighthouse score > 90
+- [ ] Accessibility compliance verified
+
+### Performance Requirements
+- [ ] First Contentful Paint < 1.5s
+- [ ] Largest Contentful Paint < 2.5s
+- [ ] Cumulative Layout Shift < 0.1
+- [ ] First Input Delay < 100ms
+
+
+---
+
+## 🎯 FRONTEND SUCCESS METRICS
+
+Your performance will be measured by:
+1. **SEO Performance**: Google rankings for Korean keywords
+2. **User Experience**: Conversion rates and engagement metrics
+3. **Technical Quality**: Lighthouse scores and Core Web Vitals
+4. **Code Quality**: TypeScript strict compliance and maintainability
+5. **Mobile Performance**: Perfect mobile experience
+
+**REMEMBER**: This is the primary customer touchpoint for RainbowRich. Every pixel, every millisecond of performance, and every piece of content directly impacts business success. Build with Korean users in mind and never compromise on quality.
+
+
+

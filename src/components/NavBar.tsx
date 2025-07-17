@@ -6,8 +6,9 @@ import { usePathname } from 'next/navigation';
 import MobileNav from './MobileNav';
 
 export default function NavBar() {
+  // 스크롤 상태 관리
   const [isScrolled, setIsScrolled] = useState(false);
-  const pathname = usePathname();
+  const pathname = usePathname(); // 현재 경로
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,6 +22,7 @@ export default function NavBar() {
 
   const navItems = [
     { href: '/', label: '홈' },
+    { href: '/tools', label: '계산기' },
     { href: '/updates', label: '업데이트 내역' },
     { href: '/contact', label: '문의' },
   ];

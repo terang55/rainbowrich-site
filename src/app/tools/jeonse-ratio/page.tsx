@@ -106,8 +106,9 @@ function JeonseRatioContent() {
     const monthlyRentPrice = parseFloat(inputs.monthlyRentPrice || '0') * 10000;
     const area = parseFloat(inputs.area || '84');
     const buildingAge = parseFloat(inputs.buildingAge || '10');
-    const loanAmount = parseFloat(inputs.loanAmount || '0') * 10000;
-    const interestRate = parseFloat(inputs.interestRate) / 100;
+    // 대출 관련 변수는 현재 사용되지 않지만 향후 기능 확장을 위해 주석 처리
+    // const loanAmount = parseFloat(inputs.loanAmount || '0') * 10000;
+    // const interestRate = parseFloat(inputs.interestRate) / 100;
 
     // 1. 기본 전세가율 계산
     const jeonseRatio = Math.round((jeonsePrice / purchasePrice) * 100 * 10) / 10;

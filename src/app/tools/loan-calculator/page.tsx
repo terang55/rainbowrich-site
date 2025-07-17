@@ -132,7 +132,7 @@ function LoanCalculatorContent() {
         let monthlyPayment: number;
         let totalPayment: number;
         let totalInterest: number;
-        let schedule: CalculationResult['schedule'] = [];
+        const schedule: CalculationResult['schedule'] = [];
 
         if (inputs.paymentType === 'equal') {
             monthlyPayment = equalMonthlyPayment;
@@ -263,7 +263,7 @@ function LoanCalculatorContent() {
         const futureValue = monthlyInvestment *
             ((Math.pow(1 + monthlyInvestmentReturn, investmentMonths) - 1) / monthlyInvestmentReturn);
 
-        const totalInvestmentAmount = monthlyInvestment * investmentMonths;
+        // const totalInvestmentAmount = monthlyInvestment * investmentMonths; // 현재 사용되지 않음
         const netBenefit = futureValue - totalPayment;
 
         const investmentAlternative = {

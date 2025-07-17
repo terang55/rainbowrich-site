@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
 
 export const metadata: Metadata = {
   title: '부동산 투자 계산기 모음 - 무료 도구',

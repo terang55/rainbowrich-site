@@ -100,67 +100,68 @@ const stats = [
 export default function StaticHomepageContent() {
   return (
     <>
-      {/* 히어로 섹션 */}
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* 배경 그래디언트 효과 */}
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-50 to-transparent -z-10 rounded-3xl opacity-70"></div>
-        
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          {/* 왼쪽: 텍스트 콘텐츠 */}
-          <div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              레인보우리치
-            </h1>
-            <p className="text-xl sm:text-2xl text-gray-600 mb-8">
-              부동산 투자의 새로운 패러다임! 클릭 한 번으로 아파트 매물 정보를 엑셀에 자동 저장.
-              <span className="font-semibold text-blue-600"> 500명 이상이 검증한</span> 프로그램으로 급매 기회를 놓치지 마세요.
-            </p>
-            
-            {/* CTA 버튼 */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-6">
-              <Link 
-                href="/sample"
-                className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
-              >
-                무료 샘플 신청
-              </Link>
-              <Link 
-                href="/order"
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
-              >
-                지금 구매하기
-              </Link>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* 히어로 섹션 */}
+        <div className="relative">
+          {/* 배경 그래디언트 효과 */}
+          <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-50 to-transparent -z-10 rounded-3xl opacity-70"></div>
+          
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            {/* 왼쪽: 텍스트 콘텐츠 */}
+            <div>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                레인보우리치
+              </h1>
+              <p className="text-xl sm:text-2xl text-gray-600 mb-8">
+                부동산 투자의 새로운 패러다임! 클릭 한 번으로 아파트 매물 정보를 엑셀에 자동 저장.
+                <span className="font-semibold text-blue-600"> 500명 이상이 검증한</span> 프로그램으로 급매 기회를 놓치지 마세요.
+              </p>
+              
+              {/* CTA 버튼 */}
+              <div className="flex flex-col sm:flex-row gap-4 mb-6">
+                <Link 
+                  href="/sample"
+                  className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
+                >
+                  무료 샘플 신청
+                </Link>
+                <Link 
+                  href="/order"
+                  className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
+                >
+                  지금 구매하기
+                </Link>
+              </div>
+              
+              <p className="text-sm text-gray-600">
+                💎 50,000원 단 한 번 결제로 평생 사용 • 📞 24시간 고객지원
+              </p>
             </div>
             
-            <p className="text-sm text-gray-600">
-              💎 50,000원 단 한 번 결제로 평생 사용 • 📞 24시간 고객지원
-            </p>
-          </div>
-          
-          {/* 오른쪽: 이미지/애니메이션 */}
-          <div className="relative mt-8 md:mt-0">
-            <div className="bg-white rounded-xl shadow-xl p-4 transform rotate-2 hover:rotate-0 transition-transform">
-              <div className="bg-gray-200 rounded-lg aspect-video flex items-center justify-center">
-                <div className="text-center p-4">
-                  <div className="text-4xl mb-2">📊</div>
-                  <p className="text-gray-600 font-medium">레인보우리치 대시보드</p>
+            {/* 오른쪽: 이미지/애니메이션 */}
+            <div className="relative mt-8 md:mt-0">
+              <div className="bg-white rounded-xl shadow-xl p-4 transform rotate-2 hover:rotate-0 transition-transform">
+                <div className="bg-gray-200 rounded-lg aspect-video flex items-center justify-center">
+                  <div className="text-center p-4">
+                    <div className="text-4xl mb-2">📊</div>
+                    <p className="text-gray-600 font-medium">레인보우리치 대시보드</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            
-            {/* 플로팅 요소들 */}
-            <div className="absolute -top-4 -right-4 bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-bold animate-bounce">
-              신규 기능!
-            </div>
-            <div className="absolute -bottom-4 -left-4 bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-bold shadow-lg">
-              90% 시간 절약
+              
+              {/* 플로팅 요소들 */}
+              <div className="absolute -top-4 -right-4 bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-bold animate-bounce">
+                신규 기능!
+              </div>
+              <div className="absolute -bottom-4 -left-4 bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-bold shadow-lg">
+                90% 시간 절약
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
         {/* 통계 섹션 */}
-        <div className="bg-white rounded-xl shadow-lg p-8 mb-16">
+        <div className="bg-white rounded-xl shadow-lg p-8 mb-16 mt-16">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">

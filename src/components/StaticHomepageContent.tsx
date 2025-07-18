@@ -278,7 +278,7 @@ export default function StaticHomepageContent() {
                 </div>
               </div>
               <p className="text-gray-600">
-                "매물 정보를 일일이 찾아보는 시간이 너무 많이 들었는데, 레인보우리치를 사용하면서 시간이 90% 이상 절약되었습니다. 덕분에 좋은 매물을 빠르게 발견할 수 있었어요."
+                &ldquo;매물 정보를 일일이 찾아보는 시간이 너무 많이 들었는데, 레인보우리치를 사용하면서 시간이 90% 이상 절약되었습니다. 덕분에 좋은 매물을 빠르게 발견할 수 있었어요.&rdquo;
               </p>
             </div>
             
@@ -297,7 +297,7 @@ export default function StaticHomepageContent() {
                 </div>
               </div>
               <p className="text-gray-600">
-                "급매 알림 기능이 정말 유용해요. 시세보다 저렴한 매물이 나왔을 때 바로 알림을 받아서 좋은 기회를 놓치지 않게 되었습니다. 투자 수익률도 크게 향상되었어요."
+                &ldquo;급매 알림 기능이 정말 유용해요. 시세보다 저렴한 매물이 나왔을 때 바로 알림을 받아서 좋은 기회를 놓치지 않게 되었습니다. 투자 수익률도 크게 향상되었어요.&rdquo;
               </p>
             </div>
             
@@ -316,7 +316,7 @@ export default function StaticHomepageContent() {
                 </div>
               </div>
               <p className="text-gray-600">
-                "데이터 분석 기능이 정말 뛰어납니다. 지역별, 평형별 시세를 한눈에 파악할 수 있어서 투자 결정을 내리는 데 큰 도움이 되었어요. 고객 지원도 매우 친절합니다."
+                &ldquo;데이터 분석 기능이 정말 뛰어납니다. 지역별, 평형별 시세를 한눈에 파악할 수 있어서 투자 결정을 내리는 데 큰 도움이 되었어요. 고객 지원도 매우 친절합니다.&rdquo;
               </p>
             </div>
           </div>

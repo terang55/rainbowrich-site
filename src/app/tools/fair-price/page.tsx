@@ -89,7 +89,7 @@ function FairPriceCalculatorContent() {
     const age = parseInt(inputs.age);
     
     // 1. 기본 가격 계산 (최근 실거래가 기준)
-    let basePrice = recentTransactions;
+    const basePrice = recentTransactions;
     
     // 2. 층수 조정
     const floorFactor = floor <= 1 ? 0.98 : floor >= 15 ? 1.05 : 1 + (floor - 5) * 0.005;
@@ -517,7 +517,7 @@ function FairPriceCalculatorContent() {
               <div className="text-6xl mb-4">🏠</div>
               <h3 className="text-xl font-medium text-gray-700 mb-2">아파트 정보를 입력하세요</h3>
               <p className="text-gray-500 max-w-md">
-                왼쪽 폼에 아파트 정보를 입력하고 '적정가 계산하기' 버튼을 클릭하면 상세한 분석 결과를 확인할 수 있습니다.
+                왼쪽 폼에 아파트 정보를 입력하고 &apos;적정가 계산하기&apos; 버튼을 클릭하면 상세한 분석 결과를 확인할 수 있습니다.
               </p>
             </div>
           )}

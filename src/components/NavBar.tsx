@@ -22,7 +22,7 @@ export default function NavBar() {
 
   const navItems = [
     { href: '/', label: '홈' },
-    { href: '/tools', label: '계산기' },
+    { href: '/tools', label: '부동산 계산기' },
     { href: '/updates', label: '업데이트 내역' },
     { href: '/contact', label: '문의' },
   ];
